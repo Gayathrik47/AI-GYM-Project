@@ -1,0 +1,1 @@
+export const API_URL = "https://ai-gym-project-ey72.onrender.com";
