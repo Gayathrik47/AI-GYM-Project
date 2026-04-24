@@ -7,31 +7,26 @@ from routes.habit import habit_bp
 from routes.analytics import analytics_bp
 import os
 
-# Create app FIRST
+# CREATE APP FIRST
 app = Flask(__name__)
 CORS(app)
 
-# Register Blueprints
+#  Register routes
 app.register_blueprint(chat_bp,      url_prefix='/api')
 app.register_blueprint(workout_bp,   url_prefix='/api')
 app.register_blueprint(diet_bp,      url_prefix='/api')
 app.register_blueprint(habit_bp,     url_prefix='/api')
 app.register_blueprint(analytics_bp, url_prefix='/api')
 
-# Home route
+#  Home route
 @app.route('/')
 def index():
     return {
         "message": "FitAI API v2.0 is running!",
-        "version": "2.0",
-        "new_endpoints": [
-            "POST /api/habit",
-            "POST /api/habit/log",
-            "GET /api/analytics/all"
-        ]
+        "version": "2.0"
     }
 
-# Run server (ONLY once)
+#  RUN LAST (VERY IMPORTANT)
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
     app.run(host="0.0.0.0", port=port)
