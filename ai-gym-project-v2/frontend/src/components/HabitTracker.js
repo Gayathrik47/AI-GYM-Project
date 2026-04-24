@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000';
+const API_URL = "https://ai-gym-project-ey72.onrender.com";
 
 const MOOD_OPTIONS = [
   { value: 'good', label: '😊 Good', color: '#10b981' },
