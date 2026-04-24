@@ -110,7 +110,7 @@ ai-gym-project/
 ### Habit API Example
 ```bash
 # Predict skip risk
-curl -X POST http://localhost:5000/api/habit \
+curl -X POST https://ai-gym-project-ey72.onrender.com/api/habit
   -H "Content-Type: application/json" \
   -d '{
     "days_since_last_workout": 3,
@@ -155,7 +155,6 @@ pip install -r requirements.txt
 
 # Start server
 python app.py
-# ✅ http://localhost:5000
 ```
 
 ### 2️⃣ Frontend
@@ -163,7 +162,7 @@ python app.py
 cd ai-gym-project/frontend
 npm install
 npm start
-# ✅ http://localhost:3000
+# ✅
 ```
 
 ---
